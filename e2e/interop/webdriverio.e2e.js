@@ -17,12 +17,12 @@ const { remote } = require('../../packages/webdriverio')
 })().then(
     () => {
         console.log('WebdriverIO CJS Test Passed!')
-        chromedriver.stop()
+        chromedriver.quit()
         process.exit(0)
     },
     () => {
         console.log('WebdriverIO CJS Test Failed!')
-        chromedriver.stop()
+        chromedriver.quit()
         process.exit(1)
     }
 )

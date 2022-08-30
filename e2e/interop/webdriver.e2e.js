@@ -17,12 +17,12 @@ const WebDriver = require('../../packages/webdriver')
 })().then(
     () => {
         console.log('WebDriver CJS Test Passed!')
-        chromedriver.stop()
+        chromedriver.quit()
         process.exit(0)
     },
     () => {
         console.log('WebDriver CJS Test Failed!')
-        chromedriver.stop()
+        chromedriver.quit()
         process.exit(1)
     }
 )
